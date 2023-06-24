@@ -1,0 +1,5 @@
+com\sojern\service\VersionValidator.class
+com\sojern\view\Prompter.class
+com\sojern\service\VersionComparator.class
+com\sojern\utils\VersionConstants.class
+com\sojern\VersionComparison.class
