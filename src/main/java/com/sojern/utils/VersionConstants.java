@@ -14,7 +14,7 @@ public class VersionConstants {
     public static final String VERSION_SIZE_VALIDATION = "Version size has to be at least 1 and" +
             " most 20 characters";
     public static final String VERSION_CANT_START_WITH_MORE_THAN_ONE_ZERO = "Major versions cant start with more than one 0";
-    public static final String INAVLID_SEMANTIC_VERSIONING = "Only traditional semantic versioning is accepted for now: Major.Minor.Patch";
+    public static final String INAVLID_SEMANTIC_VERSIONING = "Versions can currently only be made up of max 7 numeric sequences (or 6 dots separating numbers)";
     public static final String INVALID_MINOR_OR_PATCH_VERSION = "Minor or patch version cant start with 0 followed by a number";
 
 
