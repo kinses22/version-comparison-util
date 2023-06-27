@@ -31,9 +31,8 @@ is provided for it.*
 - javac VersionComparison.java & java VersionComparison 
 - if you have class patch issues try prefixing the arguments with com.sojern 
 
-##Assumptions
 
-###Validations
+###Assumptions
 
 - You can have a major, minor, patch etc as "0" . e.g "0.0.0.0"
 - You can't have a 0 followed by a number in any part of the version unless prefixed with a
@@ -41,20 +40,21 @@ is provided for it.*
 - There's no mention of limiting to strict semantic versioning (Major.Minor.Patch). The biggest example 
   was 1.2.9.9.9.9 so I have limited both the separate number sequences once they are split to an array
   to have max length 6 and the version string size to min 1 and max 20. this is to prevent excessive
-  memory usage etc. E.g 1.1.1.1.1.1 is a valid version, 1.1.1.1.1.1.2 is not valid. 
+  memory usage etc. E.g 1.1.1.1.1.1 is a valid version, 1.1.1.1.1.1.2 is not valid.
+- You can only have numbers separated by dots.  
 
 ##Future Considerations
 
 - Current validation on string passed only limited to taking in numbers
 and dots and a minimum length of 1 and max of 20. This would be updated to accommodate bigger versions 
-when allowing for more than just Major, Minor, Patch. A limit should always be considered as we use a regex on the string
+when allowing for more than just numbers and dots . A limit should always be considered as we use a regex on the string
 and we would be vulnerable to denial of service attacks if a huge string was passed.  
 - Exception handling to be improved by creating specific exception
 classes. 
 - The main class was out of scope but if time permitted I would have cleaned it up.
 - I have kept the two classes separate as they do not need to necessarily know about each other
-  and the VersionValidator could be potentially used elsewhere to just merely check if the version
-  is valid and not necessarily need to compare. 
+  and the VersionValidator could be potentially used elsewhere to just merely check if a version
+  is valid and not necessarily needed to be compared. 
 
  
  
